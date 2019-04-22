@@ -1,4 +1,5 @@
-#ifndef NODE_H__
+#ifndef NODE_H_
+#define NODE_H_
 
 #include <ostream>
 
@@ -16,7 +17,7 @@ typedef struct node {
 
 Node *find_node(Node *, int key);
 
-Node *insert_node(Node **, Node *, Node *, bool);
+Node *insert_node(Node **, Node *);
 
 void add_key(Node **, int);
 

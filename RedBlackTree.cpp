@@ -13,7 +13,7 @@ Node *RedBlackTree::FindNode(int key) {
 }
 
 Node *RedBlackTree::InsertNode(Node *new_node) {
-  return insert_node(&root, NULL, new_node, false);
+  return insert_node(&root, new_node);
 }
 
 void RedBlackTree::AddKey(int key) {
