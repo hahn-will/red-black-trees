@@ -13,15 +13,15 @@ Node *RedBlackTree::FindNode(int key) {
 }
 
 Node *RedBlackTree::InsertNode(Node *new_node) {
-  return insert_node(&root, new_node);
+  return insert_node(&root, NULL, new_node, false);
 }
 
 void RedBlackTree::AddKey(int key) {
   add_key(&root, key);
 }
 
-void RedBlackTree::TreeOut(ostream output) {
-  tree_command(root, output);
+void RedBlackTree::TreeOut(ostream &output) {
+  tree_command(root, output, 0);
 }
 
 Node *RedBlackTree::DeleteNode(Node *node) {
@@ -29,5 +29,9 @@ Node *RedBlackTree::DeleteNode(Node *node) {
 }
 
 Node *RedBlackTree::DeleteKey(int key) {
-  return delete_key(key)
+  return delete_key(key);
+}
+
+void RedBlackTree::flushTree() {
+  flush_tree(&root);
 }

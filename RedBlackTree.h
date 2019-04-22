@@ -1,10 +1,8 @@
 #ifndef RED_BLACK_TREE_H__
 
-#include <fstream>
-
 #include "Node.h"
 
-class RedBlackTree{
+class RedBlackTree {
   public:
     RedBlackTree();
     ~RedBlackTree();
@@ -14,7 +12,7 @@ class RedBlackTree{
     Node *DeleteNode(Node *);
     Node *DeleteKey(int key);
     void AddKey(int key);
-    void TreeOut(ostream);
+    void TreeOut(ostream &);
 
   private:
     Node *root;
